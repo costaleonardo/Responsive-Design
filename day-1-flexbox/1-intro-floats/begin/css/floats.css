@@ -31,13 +31,122 @@ div img {
 }
 
 /* grid system -- mobile first! */
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
 
+[class*='col-1'] {
+	width: 92%;
+	margin-right: 4%;
+	margin-left: 4%;
+	min-height: 1px; /* IE */
+}
+
+.col-1-2, 
+.col-1-4 {
+	background-color: #ffc;
+}
+.col-2 {
+	background-color: #fcf;
+}
+.col-3 {
+	background-color: #cff;
+}
+.col-4 {
+	background-color: #ccf;
+}
+
+/* .row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-1 {
+	float: none;
+	margin: 1%;
+	width: 98%;
+}
+
+.col-2 {
+	float: none;
+	margin: 1%;
+	width: 98%;
+}
+
+.col-3 {
+	float: none;
+	margin: 1%;
+	width: 98%;
+}
+
+.col-4 {
+	float: none;
+	margin: 1%;
+	width: 98%;
+} */
 
 /* Mobile Landscape Screen Sizes */
 @media only screen and (min-width: 480px)  {
+	/* .col-1 {
+		float: left;
+		width: 44%;
+	}
 
+	.col-2 {
+		float: left;
+		width: 44%;
+	} 
+
+	.col-3 {
+		float: left;
+		width: 44%;
+	} 
+
+	.col-4 {
+		float: left;
+	} */
+
+	[class*='col-'] {
+		margin-right: 0;
+		min-height: 1px;
+		float: left;
+	}
+
+	.col-1-2,
+	.col-2 {
+		width: 44%;
+	}
+
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		width: 92%;
+	}
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
+	/* .col-1 {
+		margin-right: 4%;
+		width: 20%;
+	} */
 
+	.col-1-2,
+	.col-1-4 {
+		width: 20%;
+	}
+
+	.col-2 {
+		width: 44%;
+	}
+
+	.col-3 {
+		width: 68%;
+	}
+
+	.col-4 {
+		width: 92%;
+	}
 }

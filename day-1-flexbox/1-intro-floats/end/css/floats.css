@@ -36,6 +36,7 @@ div img {
     display: table;
     clear:both;
 } 
+
 [class*='col-'] {
 	width: 92%;
 	margin-left: 4%;
